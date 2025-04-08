@@ -1,4 +1,4 @@
-# practicaJs2024
+# practicaJs2025
 
 Para experimentar en clases
 
