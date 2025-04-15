@@ -118,3 +118,69 @@ var vida = 1; // Declaración de una variable con valor 1
 estaVivo(); // Llama a la función estaVivo
 vida -= 1; // Resta 1 a vida
 estaVivo(); // Llama a la función estaVivo
+
+// Ejemplos de metodos de arrays: map, filter y reduce
+
+let array = [1, 2, 3, 4, 5]; // Declaración de un array con valores del 1 al 5
+
+array.map((elemento) => {
+  // Recorre el array y aplica una función a cada elemento
+  console.log(elemento); // Imprime cada elemento del array
+}); // Llama a la función map
+
+let array2 = [10, 20, 30, 40, 50]; // Declaración de otro array con valores del 10 al 50
+
+// filtrar numeros menos a 30
+let numerosMenos30 = array2.filter((elemento) => {
+  // Recorre el array y aplica una función a cada elemento
+  return elemento < 30; // Devuelve verdadero si el elemento es menor que 30
+});
+
+console.log(numerosMenos30); // Imprime el array filtrado (10, 20)
+let array4 = [10, 20, 30, 40, 50];
+
+// filtrar numeros mayores a 100
+let numerosMayores100 = array4.filter((elemento) => {
+  // Recorre el array y aplica una función a cada elemento
+  return elemento > 100; // Devuelve verdadero si el elemento es menor que 30
+});
+
+console.log(numerosMayores100); // Imprime el array filtrado (10, 20)
+
+let array3 = [1, 2, 3, 4, 5]; // Declaración de otro array con valores del 1 al 5
+// usa reduce para sumar los elementos del array
+
+let sumaTotal = array3.reduce((acumulador, elemento) => {
+  // Recorre el array y aplica una función a cada elemento
+  return acumulador + elemento; // Devuelve la suma del acumulador y el elemento
+}, 0); // Inicializa el acumulador en 0
+
+console.log(sumaTotal); // Imprime la suma total (15)
+
+// array de nombres de armas de cs2 y recorrer con reduce
+
+let armas = [
+  "AK-47",
+  "M4A4",
+  "AWP",
+  "Desert Eagle",
+  "Glock-18",
+  "FAMAS",
+  "MP5-SD",
+  "UMP-45",
+  "P90",
+  "Nova",
+];
+
+// usa reduce para concatenar los nombres de las armas
+
+let armasConcatenadas = armas.reduce((acumulador, elemento) => {
+  if (acumulador !== "") {
+    // Si el acumulador no está vacío, agrega una coma antes del elemento
+    acumulador += ", "; // Devuelve la concatenación del acumulador y el elemento
+  }
+  // Recorre el array y aplica una función a cada elemento
+  return acumulador + elemento; // Devuelve la concatenación del acumulador y el elemento
+}, ""); // Inicializa el acumulador en ""
+
+console.log(armasConcatenadas); // Imprime la concatenación de los nombres de las armas
